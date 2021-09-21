@@ -267,7 +267,7 @@ nav {
 
   .hero__img {
     margin-left: 5rem;
-    display: block !important;
+    display: block;
     width: 30%;
   }
 
