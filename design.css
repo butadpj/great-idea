@@ -143,7 +143,7 @@ nav {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 5.375rem); /* 5.375rem is the height of navbar  */
   border-bottom: 1px solid black;
 }
 
@@ -223,7 +223,7 @@ nav {
     opacity: 1;
     visibility: visible;
     width: auto; /* Change from 70% to auto */
-    padding: 0;
+    padding: 0; /* Remove padding top and bottom */
     background: none;
   }
 
