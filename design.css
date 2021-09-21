@@ -6,9 +6,7 @@
 }
 
 body {
-  font-size: 16px;
   font-family: Arial;
-  background: white;
 }
 
 /* CLASS UTLITIES START/OVERRIDES */
@@ -92,6 +90,10 @@ nav {
   background: black;
 }
 
+.nav__links--show {
+  display: flex;
+}
+
 .nav__links a {
   text-decoration: none;
   color: white;
@@ -101,10 +103,6 @@ nav {
 .nav__links a:hover {
   background: white;
   color: black;
-}
-
-.nav__links--show {
-  display: flex;
 }
 
 /* NAV SECTION END */
