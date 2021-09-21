@@ -1,18 +1,18 @@
 const navLinks = document.querySelector('.nav__links');
+const openIcon = document.querySelector('.area__open');
+const closeIcon = document.querySelector('.area__close');
 
 const navToggle = () => {
-  document.querySelector('.area__open').addEventListener('click', () => {
-    navLinks.classList.add('nav__links--show');
-    document.querySelector('.area__open').classList.add('area__open--hide');
-    document.querySelector('.area__close').classList.add('area__close--show');
+  openIcon.addEventListener('click', () => {
+    navLinks.classList.add('nav__links--show'); // Show Nav Links
+    openIcon.classList.add('area__open--hide'); // Hide "open icon"
+    closeIcon.classList.add('area__close--show'); // Show "close icon"
   });
 
-  document.querySelector('.area__close').addEventListener('click', () => {
-    navLinks.classList.remove('nav__links--show');
-    document.querySelector('.area__open').classList.remove('area__open--hide');
-    document
-      .querySelector('.area__close')
-      .classList.remove('area__close--show');
+  closeIcon.addEventListener('click', () => {
+    navLinks.classList.remove('nav__links--show'); // Hide Nav Links
+    openIcon.classList.remove('area__open--hide'); // Show "open icon"
+    closeIcon.classList.remove('area__close--show'); // Hide "close icon"
   });
 };
 
