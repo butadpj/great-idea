@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial;
+  background: white;
+}
+
+/* CLASS UTLITIES START/OVERRIDES */
+
+.link {
+  cursor: pointer;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  letter-spacing: 0.1rem;
+  border: 1px solid black;
+  transition: 0.4s ease-out;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+strong {
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+/* CLASS UTLITIES END/OVERRIDES */
+
+.app {
+  padding-bottom: 6rem; /* Space for navbar in mobile devices */
+}
+
+/* NAV SECTION START */
+
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5vw;
+  background: white;
+  z-index: 1;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.171);
+}
+
+.nav__area {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.5;
+  visibility: hidden;
+  width: 70%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: black;
+  padding: 2rem 0;
+}
+
+.nav__area--show {
+  opacity: 1;
+  width: 70%;
+  visibility: visible;
+  transition: 0.4s ease-out;
+}
+
+.nav__area--hide {
+  opacity: 0.5;
+  width: 0%;
+  visibility: hidden;
+}
+
+.nav__links {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  font-weight: 900;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__links li {
+  padding: 1.5rem;
+  transition: color, background-color 0.4s ease;
+  border-bottom: 1px solid white;
+}
+
+.nav__links a:hover li {
+  background: white;
+  color: black;
+}
+
+.area__open {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+.area__open:hover {
+  border: 1px solid black;
+}
+
+.area__close {
+  font-size: 1.5em;
+  padding: 0.5rem 1rem;
+  align-self: flex-end;
+  margin-right: 1rem;
+  color: white;
+}
+
+.area__close:hover {
+  border: 1px solid white;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+}
+
+.nav__logo a {
+  text-decoration: none;
+  color: black;
+}
+
+/* NAV SECTION END */
+
+/* HERO SECTION START */
+
+.hero {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 1px solid black;
+}
+
+.hero__main {
+  text-align: center;
+}
+
+.hero__main h1 {
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.hero__img {
+  display: none;
+}
+
+/* HERO SECTION END */
+
+/* SUMMARY SECTION START */
+
+.summary {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 3rem 0;
+}
+
+.summary .card {
+  flex: 1 0 15rem;
+  display: flex;
+  flex-flow: column;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.summary img {
+  width: 100%;
+}
+
+/* SUMMARY SECTION END */
+
+/* CONTACT SECTION START */
+
+.contact {
+  font-size: 1.5rem;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.footer {
+  text-align: center;
+}
+/* CONTACT SECTION END */
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  .summary,
+  .contact {
+    padding: 3rem;
+  }
+
+  /* NAV DESKTOP START */
+  nav {
+    bottom: calc(100% - 5.354375rem);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.171);
+  }
+
+  .nav__area {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    border-left: none;
+    padding: 0;
+    flex-flow: row;
+    background: none;
+  }
+
+  .nav__logo {
+    order: 2;
+  }
+
+  .nav__links {
+    flex-flow: row;
+    font-size: 0.9rem;
+  }
+
+  .nav__links li {
+    margin: 0 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .nav__links a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.534);
+  }
+
+  .nav__links a:hover li {
+    color: black;
+  }
+
+  .area__close,
+  .area__open {
+    /* 
+      Override material icon .fas class 
+      which has higher specificity
+    */
+    display: none !important;
+  }
+  /* NAV DESKTOP END */
+
+  /* HERO DEKSTOP START */
+
+  .hero {
+    flex-flow: row wrap;
+  }
+
+  .hero__img {
+    margin-left: 5rem;
+    display: block !important;
+    width: 30%;
+  }
+
+  /* HERO DEKSTOP END */
+
+  /* SUMMARY DEKSTOP START */
+  .summary img {
+    height: 15rem;
+    object-fit: cover;
+  }
+  /* SUMMARY DEKSTOP END */
+}
