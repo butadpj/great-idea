@@ -221,7 +221,7 @@ nav {
     position: static;
     opacity: 1;
     visibility: visible;
-    width: auto;
+    width: auto; /* Change from 70% to auto */
     border-left: none;
     padding: 0;
     flex-flow: row;
