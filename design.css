@@ -222,9 +222,7 @@ nav {
     opacity: 1;
     visibility: visible;
     width: auto; /* Change from 70% to auto */
-    border-left: none;
     padding: 0;
-    flex-flow: row;
     background: none;
   }
 
