@@ -27,13 +27,10 @@ body {
 
 h1 {
   font-size: 3rem;
-  font-weight: 800;
 }
 
-strong {
+.bold {
   font-weight: 800;
-  margin-bottom: 1rem;
-  text-transform: capitalize;
 }
 
 /* CLASS UTLITIES END/OVERRIDES */
@@ -57,6 +54,7 @@ nav {
   box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.171);
 }
 
+/* Hamburger menu wrapper */
 .nav__area {
   position: fixed;
   top: 0;
@@ -79,11 +77,11 @@ nav {
   transition: 0.4s ease-out;
 }
 
+/* Hamburger menu links */
 .nav__links {
   display: flex;
   flex-flow: column;
   list-style: none;
-  font-weight: 900;
   font-size: 1.3rem;
   letter-spacing: 0.1rem;
 }
@@ -104,6 +102,7 @@ nav {
   color: black;
 }
 
+/* Hamburger menu icon */
 .area__open {
   font-size: 1.3rem;
   padding: 0.5rem;
@@ -113,6 +112,7 @@ nav {
   border: 1px solid black;
 }
 
+/* close ("X") icon */
 .area__close {
   font-size: 1.5em;
   padding: 0.5rem 1rem;
@@ -178,6 +178,11 @@ nav {
   padding: 1rem;
 }
 
+.card__title {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
 .summary img {
   width: 100%;
 }
@@ -211,6 +216,7 @@ nav {
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.171);
   }
 
+  /* The hamburger menu will change to regular navbar */
   .nav__area {
     position: static;
     opacity: 1;
