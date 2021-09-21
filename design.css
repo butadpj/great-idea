@@ -79,12 +79,6 @@ nav {
   transition: 0.4s ease-out;
 }
 
-.nav__area--hide {
-  opacity: 0.5;
-  width: 0%;
-  visibility: hidden;
-}
-
 .nav__links {
   display: flex;
   flex-flow: column;
