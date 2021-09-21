@@ -61,8 +61,8 @@ nav {
   right: 0;
   height: 100%;
   opacity: 0.5;
+  width: 0%;
   visibility: hidden;
-  width: 70%;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
