@@ -42,96 +42,69 @@ h1 {
 /* NAV SECTION START */
 
 nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 5vw;
-  background: white;
-  z-index: 1;
-  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.171);
-}
-
-/* Hamburger menu wrapper */
-.nav__area {
-  position: fixed;
+  position: sticky;
   top: 0;
-  right: 0;
-  height: 100%;
-  opacity: 0.5;
-  width: 0%;
-  visibility: hidden;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  background: black;
-  padding: 2rem 0;
-}
-
-.nav__area--show {
-  opacity: 1;
-  width: 70%;
-  visibility: visible;
-  transition: 0.4s ease-out;
-}
-
-/* Hamburger menu links */
-.nav__links {
-  display: flex;
-  flex-flow: column;
-  list-style: none;
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
-}
-
-.nav__links a {
-  text-decoration: none;
-  color: white;
-}
-
-.nav__links li {
-  padding: 1.5rem;
-  transition: color, background-color 0.4s ease;
-  border-bottom: 1px solid white;
-}
-
-.nav__links a:hover li {
   background: white;
-  color: black;
-}
-
-/* Hamburger menu icon */
-.area__open {
-  font-size: 1.3rem;
-  padding: 0.5rem;
-}
-
-.area__open:hover {
-  border: 1px solid black;
-}
-
-/* close ("X") icon */
-.area__close {
-  font-size: 1.5em;
-  padding: 0.5rem 1rem;
-  align-self: flex-end;
-  margin-right: 1rem;
-  color: white;
-}
-
-.area__close:hover {
-  border: 1px solid white;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.171);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  z-index: 1;
 }
 
 .nav__logo {
+  flex: 1 0 90%;
   font-size: 1.5rem;
+  padding: 1rem 0;
+  padding-left: 1rem;
 }
 
 .nav__logo a {
   text-decoration: none;
   color: black;
+}
+
+.area__open,
+.area__close {
+  flex: 1 0 10%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.area__open--hide {
+  display: none;
+}
+
+.area__close {
+  display: none;
+  padding: 1rem 0;
+}
+
+.area__close--show {
+  display: block;
+}
+
+.nav__links {
+  flex-basis: 100%;
+  display: none;
+  flex-flow: column;
+  list-style: none;
+  background: black;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+.nav__links a:hover {
+  background: white;
+  color: black;
+}
+
+.nav__links--show {
+  display: flex;
 }
 
 /* NAV SECTION END */
@@ -210,55 +183,32 @@ nav {
     padding: 3rem;
   }
 
-  /* NAV DESKTOP START */
-  nav {
-    position: sticky;
-    top: 0;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.171);
-  }
-
-  /* The hamburger menu will change to regular navbar */
-  .nav__area {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    width: auto; /* Change from 70% to auto */
-    padding: 0; /* Remove padding top and bottom */
-    background: none;
-  }
+  /* NAV DEKSTOP START */
 
   .nav__logo {
-    order: 2;
+    flex-basis: 0;
+    padding-left: 3rem;
   }
 
   .nav__links {
+    display: flex;
     flex-flow: row;
-    font-size: 0.9rem;
-  }
-
-  .nav__links li {
-    margin: 0 1rem;
-    padding: 1rem 0.5rem;
+    background: white;
+    flex-basis: 0;
+    padding-right: 3rem;
   }
 
   .nav__links a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.534);
+    color: rgba(0, 0, 0, 0.527);
+    margin: 0 1rem;
   }
 
-  .nav__links a:hover li {
-    color: black;
+  .area__open,
+  .area__close {
+    display: none;
   }
 
-  .area__close,
-  .area__open {
-    /* 
-      Override material icon .fas class 
-      which has higher specificity
-    */
-    display: none !important;
-  }
-  /* NAV DESKTOP END */
+  /* NAV DEKSTOP END */
 
   /* HERO DEKSTOP START */
 

@@ -1,12 +1,18 @@
-const navArea = document.querySelector('.nav__area');
+const navLinks = document.querySelector('.nav__links');
 
 const navToggle = () => {
   document.querySelector('.area__open').addEventListener('click', () => {
-    navArea.classList.add('nav__area--show');
+    navLinks.classList.add('nav__links--show');
+    document.querySelector('.area__open').classList.add('area__open--hide');
+    document.querySelector('.area__close').classList.add('area__close--show');
   });
 
   document.querySelector('.area__close').addEventListener('click', () => {
-    navArea.classList.remove('nav__area--show');
+    navLinks.classList.remove('nav__links--show');
+    document.querySelector('.area__open').classList.remove('area__open--hide');
+    document
+      .querySelector('.area__close')
+      .classList.remove('area__close--show');
   });
 };
 
